@@ -50,7 +50,6 @@ public class LoadController {
     public ResponseEntity<byte[]> processFile(@RequestParam("file") MultipartFile file) {
             String response = validationService.validateFile(file);
             HttpHeaders headers = new HttpHeaders();
-            headers.setContentType(MediaType.TEXT_PLAIN);
             headers.setContentDispositionFormData("attachment", "output.txt");
 
             return ResponseEntity.ok()
