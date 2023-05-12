@@ -62,6 +62,7 @@ public class ValidationService {
                                 }
                         );
             } else {
+                log.error("error with getting lock for request {}", loadRequest);
                 return LoadResponse.builder()
                         .id(loadRequest.getId())
                         .customerId(loadRequest.getCustomerId())
@@ -69,6 +70,7 @@ public class ValidationService {
                         .build();
             }
         } catch (InterruptedException e) {
+            log.error("error with getting lock for request {}", loadRequest, e);
             return LoadResponse.builder()
                     .id(loadRequest.getId())
                     .customerId(loadRequest.getCustomerId())
