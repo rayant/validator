@@ -10,7 +10,7 @@
 
 ## Notes
 
-* For better history storing daily_count_accepted, daily_limit_accepted, weekly_limit_accepted are storing separately in db.
+* For better history daily_count_accepted, daily_limit_accepted, weekly_limit_accepted are storing separately in db.
 * Flyway is used for db migration, for test purpose db is cleared for each app start, to change this create table should be replaced with create if not exist.
 * Added lock per clientId with Redis for sharing lock between different instances of app, it will prevent dirty read from db.
 * For test purpose embedded Redis is used, it should be changed for dedicated server.
