@@ -15,4 +15,5 @@
 * Added lock per clientId with Redis for sharing lock between different instances of app, it will prevent dirty read from db.
 * For test purpose embedded Redis is used, it should be changed for dedicated server.
 * 2 tests are added, one for file processing, and second for multi thread requests.
+* 13.05, added unit tests
 
